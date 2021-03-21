@@ -66,7 +66,7 @@ window.onload = () => {
 		errorMessage.style.transition = 'all 0.3s ease-in-out';
 	};
 
-	sendBtn.addEventListener('click', () => {
+	sendBtn.addEventListener('click', e => {
 		e.preventDefault();
 		if (validEmail(emailInput.value)) {
 			/*Thank you message HERE*/
