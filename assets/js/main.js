@@ -67,6 +67,7 @@ window.onload = () => {
 	};
 
 	sendBtn.addEventListener('click', () => {
+		e.preventDefault();
 		if (validEmail(emailInput.value)) {
 			/*Thank you message HERE*/
 			removeError();
