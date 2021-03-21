@@ -1,60 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Sytles -->
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/icomoon.css">
-    <link rel="stylesheet" href="./assets/css/main-style.css">
-    <title>Earl</title>
-</head>
-<body>
-    <section class="main-container">
-        <aside class="navbar">
-            <nav id="side-menu" class="navbar__side__menu">
-                <ul class="side__menu-nav">
-                    <a id="closed-side-menu" href="#" class="icon-cross" onclick="closedSlideMenu()"></a>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Clients</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main id="main" class="main">
-            <section class="container-sliders d-flex-content">
-                <a href="#">
-                    <span class="icon-circle-right"></span>
-                </a>
-                <div class="slide-1 d-flex-content">slide-1</div>
-                <div class="slide-2 d-flex-content">slide-2</div>
-                <div class="slide-3 d-flex-content">slide-3</div>
-                <div class="slide-4 d-flex-content">slide-4</div>
-                <div class="slide-5 d-flex-content">slide-5</div>
-                <div class="slide-6 d-flex-content">slide-6</div>
-            </section>
-            
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Sytles -->
+		<link rel="stylesheet" href="./assets/css/reset.css" />
+		<!-- Google Fonts-->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Syne+Mono&display=swap"
+			rel="stylesheet"
+		/>
 
-        </main>
-        
-        <footer class="footer">
-            <section class="footer__container">
-                <div class="footer__logo">
-                    <img class="footer__logo-img" src="" alt="">
-                </div>
-                <div class="footer__social">
-                    <h4 class="footer__social-title">Social</h4>
-                    <a class="footer__social-icon" href="">Instagram<i class=""></i></a>
-                    <a class="footer__social-icon" href="">Twetter<i class=""></i></a>
-                </div>
-                <div class="footer__copyright">
-                    <p class="footer__copiright-text">Copyright &copy; All right reserved | Earl Design corp.</p>
-                </div>
-            </section>
-        </footer>
-    </section>
-    <!-- script -->
-    <script src="./assets/js/main.js"></script>
-</body>
+		<link rel="stylesheet" href="./assets/css/icomoon.css" />
+		<link rel="stylesheet" href="./assets/css/main-style.css" />
+		<title>Earl</title>
+	</head>
+	<body>
+		<section class="main-container">
+			<aside class="navbar">
+				<nav id="side-menu" class="navbar__side__menu">
+					<ul class="side__menu-nav">
+						<a
+							id="closed-side-menu"
+							href="#"
+							class="icon-cross"
+							onclick="closedSlideMenu()"
+						></a>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Works</a></li>
+						<li><a href="#">Clients</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main id="main" class="main">
+				<section class="container-sliders d-flex-content">
+					<a href="#">
+						<span class="icon-circle-right"></span>
+					</a>
+					<div class="slide-1 d-flex-content">slide-1</div>
+					<div class="slide-2 d-flex-content">slide-2</div>
+					<div class="slide-3 d-flex-content">slide-3</div>
+					<div class="slide-4 d-flex-content">slide-4</div>
+					<div class="slide-5 d-flex-content">slide-5</div>
+					<div class="slide-6 d-flex-content">slide-6</div>
+				</section>
+			</main>
+			<section class="email-modal">
+				<div class="email-modal__close-btn">
+					<i class="icon-cross"></i>
+				</div>
+				<div class="email-modal__container">
+					<div class="email-modal__info">
+						<div class="logo">
+							Design
+							<div class="logo__sub">By Wolves</div>
+						</div>
+						<h2>Don't miss out this chance!</h2>
+						<p class="email-modal__message">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							Doloribus, magnam nam, ducimus consectetur, maiores vero
+							distinctio quidem dolor inventore accusantium reiciendis.
+							Accusamus ipsa ipsum enim alias unde id veritatis error!
+						</p>
+						<div class="email-modal__error-message">
+							Sorry this is not a valid email.
+						</div>
+						<form class="email-modal__form">
+							<input
+								type="text"
+								class="email-modal__input"
+								placeholder="email@mail.com"
+							/>
+							<button class="email-modal__button">Send</button>
+						</form>
+						<div class="email-modal__decline">I'm not interested.</div>
+					</div>
+					<div class="email-modal__img">
+						<img src="assets/img/side-img.jpg" />
+					</div>
+					<div class="email-thankyou">
+						<div class="email-thankyou__title">Thank You</div>
+						<p class="email-thankyou__message">
+							Check your email, we sent you some instructions and welcome to our
+							community!
+						</p>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+				<section class="footer__container">
+					<div class="footer__logo">
+						<img class="footer__logo-img" src="" alt="" />
+					</div>
+					<div class="footer__social">
+						<h4 class="footer__social-title">Social</h4>
+						<a class="footer__social-icon" href="">Instagram<i class=""></i></a>
+						<a class="footer__social-icon" href="">Twetter<i class=""></i></a>
+					</div>
+					<div class="footer__copyright">
+						<p class="footer__copiright-text">
+							Copyright &copy; All right reserved | Earl Design corp.
+						</p>
+					</div>
+				</section>
+			</footer>
+		</section>
+		<!-- script -->
+		<script src="./assets/js/main.js"></script>
+	</body>
 </html>
