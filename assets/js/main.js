@@ -2,7 +2,7 @@ const btnOpenSlideMenu = document.querySelector('#side-menu');
 const openSlideIcon = document.querySelector('.icon-circle-right');
 const btnclosedSlideMenu = document.querySelector('#closed-side-menu');
 
-openSlideIcon.addEventListener('mouseenter', e => {
+openSlideIcon.addEventListener('click', e => {
 	document.querySelector('#side-menu').style.width = '245px';
 	e.target.style.transition = '0.5s';
 	e.target.style.display = 'none';
@@ -21,7 +21,8 @@ window.onload = () => {
 		'email-modal__close-btn'
 	)[0];
 	const emailModal = document.getElementsByClassName('email-modal')[0];
-	const emailInput = document.getElementsByClassName('email-modal__input')[0];
+	const modal = document.getElementById('modal-container');
+	const emailInput = document.getElementById('emailInput');
 	const errorMessage = document.getElementsByClassName(
 		'email-modal__error-message'
 	)[0];
@@ -34,8 +35,22 @@ window.onload = () => {
 	document.body.addEventListener('mouseleave', () => {
 		if (emailModalState == false) {
 			emailModal.classList.add('email-modal__visibile');
+			emailInput.value = '';
 			emailModalState = true;
 		}
+	});
+
+	//closing modal when on outside click of modal window
+	document.body.addEventListener('click', e => {
+		let target = e.target;
+		do {
+			if (target == modal) {
+				emailInput.focus();
+				return;
+			}
+			target = target.parentNode;
+		} while (target);
+		closeEmailModal();
 	});
 
 	const closeEmailModal = () => {
@@ -69,7 +84,6 @@ window.onload = () => {
 	sendBtn.addEventListener('click', e => {
 		e.preventDefault();
 		if (validEmail(emailInput.value)) {
-			/*Thank you message HERE*/
 			removeError();
 			thankYouMessage();
 			setTimeout(() => {

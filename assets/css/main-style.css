@@ -3,6 +3,7 @@
 	font-family: 'Syne Mono', monospace;
 	--transition-5s: 0.3s;
 	--height-100: 100%;
+	--width-700: 800px;
 }
 .main-container {
 	display: grid;
@@ -43,31 +44,6 @@
 	padding: 0px;
 	text-align: center;
 }
-/*#endregion Side-Navbar*/
-
-/*#region Sliders*/
-.main {
-	position: relative;
-	grid-area: main;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
-	height: 80vh;
-}
-.container-sliders {
-	/* display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-     "slide-1 slide-2 slide-3 slide-4 slide-5 slide-6"
-     "slide-1 slide-2 slide-3 slide-4 slide-5 slide-6"
-     "slide-1 slide-2 slide-3 slide-4 slide-5 slide-6"; */
-	text-align: center;
-	display: flex;
-	height: 80vh;
-}
 
 .side__menu-nav li {
 	list-style: none;
@@ -100,39 +76,64 @@
 	color: #828584ad;
 	left: -15px;
 }
+/*#endregion Side-Navbar*/
+
+/*#region Sliders*/
+.main {
+	position: relative;
+	grid-area: main;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	height: 80vh;
+}
+.container-sliders {
+	/* display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+     "slide-1 slide-2 slide-3 slide-4 slide-5 slide-6"
+     "slide-1 slide-2 slide-3 slide-4 slide-5 slide-6"
+     "slide-1 slide-2 slide-3 slide-4 slide-5 slide-6"; */
+	text-align: center;
+	display: flex;
+	height: 80vh;
+}
 
 .slide-1 {
-	width: 700px;
+	width: var(--width-700);
 	height: var(--height-100);
 	background: #6fffd2;
 }
 
 .slide-2 {
-	width: 700px;
+	width: var(--width-700);
 	height: var(--height-100);
 	background: #73ffba;
 }
 
 .slide-3 {
-	width: 700px;
+	width: var(--width-700);
 	height: var(--height-100);
 	background: #64ffda;
 }
 
 .slide-4 {
-	width: 700px;
+	width: var(--width-700);
 	height: var(--height-100);
 	background: #42b499;
 }
 
 .slide-5 {
-	width: 700px;
+	width: var(--width-700);
 	height: var(--height-100);
 	background: #1ad3a7;
 }
 
 .slide-6 {
-	width: 700px;
+	width: var(--width-700);
 	height: var(--height-100);
 	background: #08e4b0;
 }
@@ -158,6 +159,7 @@
 	visibility: visible;
 	opacity: 1;
 }
+
 .email-modal__close-btn {
 	position: fixed;
 	top: 10px;
@@ -298,8 +300,21 @@
 /*#endregion EMAIL-MODAL*/
 
 .footer {
+	padding: 1.5rem;
 	background: #1de9b6;
 	grid-area: footer;
 	text-align: center;
 	height: 20vh;
+}
+.footer__social-title {
+	margin-bottom: 1.2rem;
+}
+.footer__social-icon {
+	text-decoration: none;
+	color: rgb(112, 99, 99);
+	font-size: 2rem;
+}
+
+.footer__copyright {
+	margin-top: 1.2rem;
 }
